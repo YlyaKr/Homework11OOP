@@ -5,10 +5,10 @@ import lombok.Data;
 @Data
 public class MovieManager {
     private Movie[] movies = new Movie[0];
-    private int maxAmount = 10;
+    private int maxLength = 10;
 
-    public MovieManager(int maxAmount) {
-        this.maxAmount = maxAmount;
+    public MovieManager(int maxLength) {
+        this.maxLength = maxLength;
     }
 
     public MovieManager() {
@@ -29,10 +29,11 @@ public class MovieManager {
     public Movie[] findLast() {
         Movie[] movies = findAll();
         int resultLength;
-        if (this.maxAmount == 10) {
-            resultLength = 10;
+        if (movies.length < maxLength) {
+            maxLength = movies.length;
+            resultLength = maxLength;
         } else {
-            resultLength = this.maxAmount;
+            resultLength = maxLength;
         }
         Movie[] result = new Movie[resultLength];
         for (int i = 0; i < result.length; i++) {

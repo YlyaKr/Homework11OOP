@@ -77,7 +77,7 @@ public class MovieManagerTest {
 
     @Test
     public void testNotDefault2() {
-        MovieManager manager = new MovieManager(1);
+        MovieManager manager = new MovieManager(2);
         manager.save(first);
         manager.save(second);
         manager.save(third);
@@ -91,7 +91,7 @@ public class MovieManagerTest {
 
         Movie[] actual = manager.findLast();
 
-        Movie[] expected = {tenth};
+        Movie[] expected = {tenth, ninth};
 
         Assertions.assertArrayEquals(expected, actual);
     }
