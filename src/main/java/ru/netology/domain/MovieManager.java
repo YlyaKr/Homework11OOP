@@ -30,12 +30,11 @@ public class MovieManager {
         Movie[] movies = findAll();
         int resultLength;
         if (movies.length < maxLength) {
-            maxLength = movies.length;
-            resultLength = maxLength;
+            resultLength = movies.length;
         } else {
             resultLength = maxLength;
         }
-        Movie[] result = new Movie[resultLength];
+        Movie[] result = new Movie[resultLengtFh];
         for (int i = 0; i < result.length; i++) {
             int index = movies.length - i - 1;
             result[i] = movies[index];
