@@ -7,10 +7,10 @@ import ru.netology.domain.Movie;
 
 public class MovieRepository {
     private Movie[] movies = new Movie[0];
-    private int maxAmount = 10;
+    private int maxLength = 10;
 
-    public MovieRepository(int maxAmount) {
-        this.maxAmount = maxAmount;
+    public MovieRepository(int maxLength) {
+        this.maxLength = maxLength;
     }
 
     public MovieRepository() {

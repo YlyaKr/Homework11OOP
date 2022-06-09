@@ -26,10 +26,10 @@ public class MovieManager {
 
         Movie[] movies = repository.findAll();
         int resultLength;
-        if (repository.getMaxAmount() == 10) {
-            resultLength = 10;
+        if (movies.length < repository.getMaxLength()) {
+            resultLength = movies.length; ;
         } else {
-            resultLength = repository.getMaxAmount();
+            resultLength = repository.getMaxLength() ;
         }
         Movie[] result = new Movie[resultLength];
         for (int i = 0; i < result.length; i++) {

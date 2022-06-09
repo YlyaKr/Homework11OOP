@@ -42,6 +42,20 @@ public class MovieManagerTest {
 
 //    @Test
 //    public void test() {
+//        Movie[] returned = {first, second, third, fourth, fifth};
+//        doReturn(returned).when(repository).findAll();
+//
+//        repository.removeById("otel-Belgrad");
+//
+//        Movie[] actual = manager.findAll();
+//        Movie[] expected = {first, second, fourth, fifth};
+//
+//        Assertions.assertArrayEquals(expected, actual);
+//
+//    }
+
+//    @Test
+//    public void test() {
 //        Movie[] returned = {first, second,  third, fourth, fifth, sixth, seventh, eighth, ninth, tenth};
 //        doReturn(returned).when(repository).findAll();
 //
